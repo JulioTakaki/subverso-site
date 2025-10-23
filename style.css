@@ -1,3 +1,4 @@
+/* ===== estilos existentes mantidos ===== */
 * {
   margin: 0;
   padding: 0;
@@ -103,4 +104,79 @@ footer {
   background: #4b0082;
   color: white;
   margin-top: 2rem;
+}
+
+/* ===== NOVOS ESTILOS DO MAPA E LISTA LATERAL ===== */
+.map-container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 1.6rem auto;
+  padding: 0 1rem;
+}
+
+#map {
+  width: 100%;
+  height: 520px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+#lista-ceus {
+  background: #fff;
+  padding: 0.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-ceus input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+}
+
+#lista-ceus button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+#ceuList {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+#ceuList li {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+#ceuList li:hover {
+  background: #f6f7ff;
+}
+
+@media (max-width: 900px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+  #lista-ceus {
+    order: 2;
+    height: 280px;
+  }
+  #map {
+    height: 360px;
+  }
 }
